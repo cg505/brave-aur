@@ -1,0 +1,13 @@
+diff --git a/lib/util.js b/lib/util.js
+index 2773a21..2fe947e 100644
+--- a/lib/util.js
++++ b/lib/util.js
+@@ -296,7 +296,7 @@ const util = {
+   },
+ 
+   gclientSync: (reset = false, options = {}) => {
+-    let args = ['sync', '--force', '--nohooks', '--with_branch_heads', '--with_tags']
++    let args = ['sync', '--force', '--nohooks', '--with_branch_heads', '--with_tags', '--no-history']
+     if (reset)
+       args.push('--upstream')
+     runGClient(args, options)
